@@ -58,4 +58,12 @@ public class Pedido {
         return valorTotal;
     }
 
+    public double getValorEntrega() {
+        return 0; // Implementar
+    }
+
+    public double getValorTotal() {
+        return getValorPedido() + getValorEntrega();
+    }
+
 }

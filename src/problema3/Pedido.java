@@ -2,6 +2,8 @@ package problema3;
 
 import java.util.ArrayList;
 import java.util.Date;
+import problema3.tipoentrega.ITipoEntrega;
+import problema3.tipoentrega.Motoboy;
 
 public class Pedido {
 
@@ -10,6 +12,7 @@ public class Pedido {
     private Date data;
     private String endereco;
     private ArrayList<ItemPedido> itens;
+    private ITipoEntrega tipoEntrega;
 
     public Pedido() {
     }
@@ -48,6 +51,7 @@ public class Pedido {
 
     public void incluirItem(Produto p, int qtd) {
         this.itens.add(new ItemPedido(p, qtd));
+        atualizaQtdTipoEntregaMotoBoy();
     }
 
     public double getValorPedido() {
@@ -59,11 +63,26 @@ public class Pedido {
     }
 
     public double getValorEntrega() {
-        return 0; // Implementar
+        return tipoEntrega.calcularValorEntrega(0); // Passar o peso total dos itens
     }
 
     public double getValorTotal() {
         return getValorPedido() + getValorEntrega();
+    }
+
+    public ITipoEntrega getTipoEntrega() {
+        return tipoEntrega;
+    }
+
+    public void setTipoEntrega(ITipoEntrega tipoEntrega) {
+        this.tipoEntrega = tipoEntrega;
+        atualizaQtdTipoEntregaMotoBoy();
+    }
+
+    private void atualizaQtdTipoEntregaMotoBoy() {
+        if (tipoEntrega instanceof Motoboy) {
+            ((Motoboy) tipoEntrega).setQtdItens(itens.size());
+        }
     }
 
 }

@@ -62,8 +62,16 @@ public class Pedido {
         return valorTotal;
     }
 
+    private int pesoTotalPedido() {
+        int pesoTotal = 0;
+        for (ItemPedido item : itens) {
+            pesoTotal += item.getProduto().getPeso() * item.getQuantidade();
+        }
+        return pesoTotal;
+    }
+
     public double getValorEntrega() {
-        return tipoEntrega.calcularValorEntrega(0); // Passar o peso total dos itens
+        return tipoEntrega.calcularValorEntrega(pesoTotalPedido());
     }
 
     public double getValorTotal() {

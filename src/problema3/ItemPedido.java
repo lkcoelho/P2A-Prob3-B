@@ -1,6 +1,6 @@
 package problema3;
 
-class ItemPedido {
+public class ItemPedido {
 
     private Produto produto;
     private int quantidade;
@@ -9,16 +9,16 @@ class ItemPedido {
      * @param produto
      * @param quantidade
      */
-    protected ItemPedido(Produto produto, int quantidade) {
+    public ItemPedido(Produto produto, int quantidade) {
         setProduto(produto);
         setQuantidade(quantidade);
     }
 
-    protected Produto getProduto() {
+    public Produto getProduto() {
         return produto;
     }
 
-    protected void setProduto(Produto produto) {
+    public void setProduto(Produto produto) {
         if (produto == null) {
             throw new IllegalArgumentException("Deve ser definido um produto");
         } else {
@@ -26,11 +26,11 @@ class ItemPedido {
         }
     }
 
-    protected int getQuantidade() {
+    public int getQuantidade() {
         return quantidade;
     }
 
-    protected void setQuantidade(int quantidade) {
+    public void setQuantidade(int quantidade) {
         if (quantidade <= 0) {
             throw new IllegalArgumentException("Quantidade de itens de pedido deve ser maior que ZERO");
         } else {
@@ -38,7 +38,7 @@ class ItemPedido {
         }
     }
 
-    protected double getValorItem() {
+    public double getValorItem() {
         return this.quantidade * this.produto.getValor();
     }
 }

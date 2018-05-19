@@ -15,6 +15,7 @@ public class Pedido {
     private ITipoEntrega tipoEntrega;
 
     public Pedido() {
+        this.itens = new ArrayList<>();
     }
 
     public int getNumero() {

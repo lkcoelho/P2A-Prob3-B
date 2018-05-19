@@ -14,7 +14,7 @@ public class Go {
     
     public static void main(String[] args) {
         
-        Produto notebook = new Produto("Muito caro", 15, 4000);
+        Produto notebook = new Produto("Muito caro", 15, 100);
         Produto livro = new Produto("Esse esta em conta", 3, 600);
         Produto carro = new Produto("MDS que caro", 500, 600000);
         Produto celular = new Produto("Esse é bom", 20, 600);
@@ -29,7 +29,7 @@ public class Go {
         pedido1.incluirItem(notebook, 3);
         pedido1.incluirItem(livro, 4);
         pedido2.incluirItem(celular, 7);
-        pedido3.incluirItem(carro, 0);
+        pedido3.incluirItem(carro, 5);
         pedido4.incluirItem(mesa, 7);
         
         ITipoEntrega tipoEntregaPedido1 = new EncomendaPAC();
@@ -43,24 +43,24 @@ public class Go {
         pedido4.setTipoEntrega(tipoEntregaPedido4);
         
         System.out.println("Pedido 1");
-        System.err.println("Valor entrega: " + pedido1.getValorEntrega());
-        System.err.println("Valor item" + pedido1.getValorPedido());
-        System.err.println("Valor total" + pedido1.getValorTotal());
+        System.out.println("Valor entrega: " + pedido1.getValorEntrega());
+        System.out.println("Valor item " + pedido1.getValorPedido());
+        System.out.println("Valor total " + pedido1.getValorTotal());
         
         System.out.println("Pedido 2");
-        System.err.println("Valor entrega: " + pedido2.getValorEntrega());
-        System.err.println("Valor item" + pedido2.getValorPedido());
-        System.err.println("Valor total" + pedido2.getValorTotal());
+        System.out.println("Valor entrega: " + pedido2.getValorEntrega());
+        System.out.println("Valor item: " + pedido2.getValorPedido());
+        System.out.println("Valor total: " + pedido2.getValorTotal());
          
         System.out.println("Pedido 3");
-        System.err.println("Valor entrega: " + pedido3.getValorEntrega());
-        System.err.println("Valor item" + pedido3.getValorPedido());
-        System.err.println("Valor total" + pedido3.getValorTotal());
+        System.out.println("Valor entrega: " + pedido3.getValorEntrega());
+        System.out.println("Valor item: " + pedido3.getValorPedido());
+        System.out.println("Valor total: " + pedido3.getValorTotal());
          
         System.out.println("Pedido 4");
-        System.err.println("Valor entrega: " + pedido4.getValorEntrega());
-        System.err.println("Valor item" + pedido4.getValorPedido());
-        System.err.println("Valor total" + pedido4.getValorTotal());
+        System.out.println("Valor entrega: " + pedido4.getValorEntrega());
+        System.out.println("Valor item: " + pedido4.getValorPedido());
+        System.out.println("Valor total: " + pedido4.getValorTotal());
     }
     
 }

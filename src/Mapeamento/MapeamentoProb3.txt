@@ -1,0 +1,8 @@
+STRATEGY
+
+
+No projeto o padrão Strategy está definido com uma classe ITipoEntrega, que é uma classe interface e que está relacionada a seus "parentes" do padrão, que no projeto estão apresentados como as classes que difinem as regras para cada tipo de entrega(EncomendaPAC, Motoboy, RetiradaLocal e Sedex), estas que irão possuir suas próprias regras para cálculo e que resultará no valor a ser cobrado a mais no pedido. Importante que estas possam futuramente ser modificadas de acordo com a necessidade do cliente, sem que intefiram no resto do projeto.
+
+SINGLETON
+
+O padrão Singleton no projeto irá criar um objeto único para nossas classes de tipo de entrega que irá tornar o acesso global as suas respectivas definições.

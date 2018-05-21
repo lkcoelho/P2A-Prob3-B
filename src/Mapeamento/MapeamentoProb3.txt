@@ -1,8 +1,15 @@
 STRATEGY
 
 
-No projeto o padr�o Strategy est� definido com uma classe ITipoEntrega, que � uma classe interface e que est� relacionada a seus "parentes" do padr�o, que no projeto est�o apresentados como as classes que difinem as regras para cada tipo de entrega(EncomendaPAC, Motoboy, RetiradaLocal e Sedex), estas que ir�o possuir suas pr�prias regras para c�lculo e que resultar� no valor a ser cobrado a mais no pedido. Importante que estas possam futuramente ser modificadas de acordo com a necessidade do cliente, sem que intefiram no resto do projeto.
+No projeto o padrão Strategy está definido com uma classe ITipoEntrega, que é uma classe interface e que está relacionada a seus "parentes" do padrão, que no projeto estão apresentados como as classes que difinem as regras para cada tipo de entrega(EncomendaPAC, Motoboy, RetiradaLocal e Sedex), estas que irão possuir suas próprias regras para cálculo e que resultará no valor a ser cobrado a mais no pedido. Importante que estas possam futuramente ser modificadas de acordo com a necessidade do cliente, sem que intefiram no resto do projeto.
+--> Prof. Marcel: mas quais os papeis definidos na estrutura do padrão? Quem os desempenha na solução apresentada? 
+--> Prof. Marcel: o parâmetro do método ITipoEntrega.calcularValorEntrega(int pesoEmGramas) seria mais flexível se fosse Pedido, pois poderia indagar qualquer característica necessária para calcular o valor. Evitaria a codificação de método Pedido.atualizaQtdTipoEntregaMotoBoy() - um "hard coded" que também torna inviável o uso do padrão Singleton para a classe Motoboy
+
 
 SINGLETON
 
-O padr�o Singleton no projeto ir� criar um objeto �nico para nossas classes de tipo de entrega que ir� tornar o acesso global as suas respectivas defini��es.
+O padrão Singleton no projeto irá criar um objeto único para nossas classes de tipo de entrega que irá tornar o acesso global as suas respectivas definições.
+--> Prof. Marcel: o padrão de projeto Singleton não foi implementado em nenhuma classe
+
+--> Prof. Marcel: o método main não manteve o mesmo pedido, alternando entre os diferentes tipos de entrega
+--> Prof. Marcel: Nota 1,8
